@@ -21,16 +21,17 @@ const WordCounter = () => {
         onChange={textChange}
       />
       <div className="mb-4">
-        <p className="text-lg"> Words: 
+        <p className="text-lg"> Words {' '}
           <span className="font-bold text-blue-600">{words.length}</span>
         </p>
-        <p className="text-lg">Characters: 
+        <p className="text-lg">Characters {' '}
           <span className="font-bold text-green-600">{symbols}</span>
         </p>
-        <p className="text-lg">Characters without spaces:{' '}
+        <p className="text-lg">Characters without spaces {' '}
           <span className="font-bold text-red-600">{symbolsWithoutSpaces}</span>
         </p>
       </div>
+
     </div>
   )
 }
