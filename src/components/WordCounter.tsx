@@ -3,8 +3,9 @@ import { useState, ChangeEvent } from 'react'
 const WordCounter = () => {
   const [text, setText] = useState('')
   const words = text.trim().length === 0 ? [] : text.trim().split(/\s+/)
-  const characters = text.length
-  const charactersWithoutSpaces = text.replace(/\s+/g, '').length
+  const symbols = text.length
+  const symbolsWithoutSpaces = text.split('').filter((char) => char !== ' ').length;
+
 
   const textChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value)
@@ -20,15 +21,14 @@ const WordCounter = () => {
         onChange={textChange}
       />
       <div className="mb-4">
-        <p>
-          Words: <span className="font-bold">{words.length}</span>
+        <p className="text-lg"> Words: 
+          <span className="font-bold text-blue-600">{words.length}</span>
         </p>
-        <p>
-          Characters: <span className="font-bold">{characters}</span>
+        <p className="text-lg">Characters: 
+          <span className="font-bold text-green-600">{symbols}</span>
         </p>
-        <p>
-          Characters without spaces:{' '}
-          <span className="font-bold">{charactersWithoutSpaces}</span>
+        <p className="text-lg">Characters without spaces:{' '}
+          <span className="font-bold text-red-600">{symbolsWithoutSpaces}</span>
         </p>
       </div>
     </div>
