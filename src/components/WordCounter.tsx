@@ -15,20 +15,20 @@ const WordCounter = () => {
     <div className="max-w-md mx-auto mt-8 p-4 bg-blue-300 rounded-md ">
       <h1 className="text-2xl font-bold mb-4 text-center">Word Counter</h1>
       <textarea
-        className="w-full h-40 p-2 mb-4 resize-none bg-white rounded"
+        className="w-full h-40 p-2 mb-5 resize-none bg-white rounded"
         placeholder="Write your text here..."
         value={text}
         onChange={textChange}
       />
       <div className="mb-4">
         <p className="text-lg"> Words {' '}
-          <span className="font-bold text-blue-600">{words.length}</span>
+          <span className="font-bold text-black-500">{words.length}</span>
         </p>
         <p className="text-lg">Characters {' '}
-          <span className="font-bold text-green-600">{symbols}</span>
+          <span className="font-bold text-green-500">{symbols}</span>
         </p>
         <p className="text-lg">Characters without spaces {' '}
-          <span className="font-bold text-red-600">{symbolsWithoutSpaces}</span>
+          <span className="font-bold text-red-500">{symbolsWithoutSpaces}</span>
         </p>
       </div>
 
